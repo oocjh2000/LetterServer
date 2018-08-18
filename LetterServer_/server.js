@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 var Message = 'null';
-var accept = false;
+var accept = 0;
 app.listen(12358, () => {
     console.log('router listening');
 });
@@ -18,7 +18,15 @@ app.get('/Letter', (req, res) => {
     res.status(200).json(Message);
 });
 app.get('/accept', (req, res) => {
-    res.status(200).json(accept);
+    if (accept == 0) {
+        res.status(200).json(accept);
+    }
+    if (accept == 1) {
+        res.status(201).json(accept);
+    } else {
+        res.status(202).json(accept);
+    }
+   
 });
 app.put('/', (req, res) => {
     Message = req.body.Message;
