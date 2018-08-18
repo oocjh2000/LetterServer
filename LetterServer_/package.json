@@ -1,0 +1,9 @@
+{
+  "name": "letter-server_",
+  "version": "0.0.0",
+  "description": "LetterServer_",
+  "main": "server.js",
+  "author": {
+    "name": "chats"
+  }
+}
