@@ -5,5 +5,8 @@
   "main": "server.js",
   "author": {
     "name": "chats"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }
